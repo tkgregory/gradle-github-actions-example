@@ -17,3 +17,8 @@ dependencies {
 application {
     mainClass = 'com.tomgregory.Application'
 }
+
+buildScan {
+    termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+    termsOfServiceAgree = 'yes'
+}
