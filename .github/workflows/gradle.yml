@@ -34,10 +34,6 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew build --scan --no-daemon
-      - name: Cleanup Gradle Cache
-        run: |
-          rm -f ~/.gradle/caches/modules-2/modules-2.lock
-          rm -f ~/.gradle/caches/modules-2/gc.properties
   build-with-gradle-build-action-cache:
     runs-on: ubuntu-latest
     steps:
@@ -70,7 +66,3 @@ jobs:
         with:
           name: Package
           path: build/libs
-      - name: Cleanup Gradle Cache
-        run: |
-          rm -f ~/.gradle/caches/modules-2/modules-2.lock
-          rm -f ~/.gradle/caches/modules-2/gc.properties
