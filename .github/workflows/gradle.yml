@@ -28,6 +28,8 @@ jobs:
           java-version: 17
           distribution: 'adopt'
           cache: gradle
+      - name: Inspect root
+        run: ls -la .
       - name: Build with Gradle
         run: ./gradlew build --scan --no-daemon
   build-with-gradle-build-action-cache:
