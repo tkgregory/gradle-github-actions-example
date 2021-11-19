@@ -23,6 +23,7 @@ buildScan {
     termsOfServiceAgree = 'yes'
 }
 
+
 testing {
     suites {
         test {
