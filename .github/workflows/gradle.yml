@@ -24,6 +24,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Inspect root before
         run: pwd && ls -la .
+      - name: Inspect temp
+        run: ls -l /home/runner/work/_temp/
       - name: Set up JDK 17
         uses: actions/setup-java@v2
         with:
