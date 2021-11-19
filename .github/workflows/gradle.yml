@@ -22,13 +22,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Inspect root before
+        run: pwd && ls -la .
       - name: Set up JDK 17
         uses: actions/setup-java@v2
         with:
           java-version: 17
           distribution: 'adopt'
           cache: gradle
-      - name: Inspect root
+      - name: Inspect root after
         run: pwd && ls -la .
       - name: Build with Gradle
         run: ./gradlew build --scan --no-daemon
