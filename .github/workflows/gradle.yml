@@ -1,11 +1,5 @@
 name: CI
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-  workflow_dispatch:
-    branches: [ master ]
+on: [push, pull_request, workflow_dispatch]
 jobs:
   build-without-cache:
     runs-on: ubuntu-latest
