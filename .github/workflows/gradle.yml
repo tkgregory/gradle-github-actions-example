@@ -10,6 +10,6 @@ jobs:
         with:
           java-version: 17
           distribution: 'adopt'
-      - uses: gradle/gradle-build-action@v2
-        with:
-          arguments: build --scan
+          cache: gradle
+      - name: Build with Gradle
+        run: ./gradlew build
