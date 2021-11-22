@@ -31,3 +31,5 @@ testing {
         }
     }
 }
+
+println 'Minor change'
