@@ -19,4 +19,4 @@ enabled vs. disabled.
 
 The project includes a single [workflow](/.github/workflows/gradle.yml) which executes the above 3 scenarios. 
 
-See *[Actions](https://github.com/tkgregory/gradle-github-actions-example/actions)* for all the results.
+See *[Actions](https://github.com/tkgregory/gradle-github-actions-example/actions)* for all the results.Minor change
