@@ -1,5 +1,7 @@
 [![CI](https://github.com/tkgregory/gradle-github-actions-example/actions/workflows/gradle.yml/badge.svg)](https://github.com/tkgregory/gradle-github-actions-example/actions/workflows/gradle.yml)
 
+View the accompanying tutorial [article](https://tomgregory.com/build-gradle-projects-with-github-actions) or [video](https://youtu.be/a7T2MU2l-es).
+
 ## Overview
 
 This project explores the different ways to build Gradle projects using GitHub actions.
