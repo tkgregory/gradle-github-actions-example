@@ -2,8 +2,7 @@ name: CI
 on:
   workflow_dispatch:
 jobs:
-
-  call-workflow:
+  job1:
     uses: Vishwastp89/gradle-github-actions-example/.github/workflows/IAS.yml@v1.1
     
   build-without-cache:
