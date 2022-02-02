@@ -7,6 +7,5 @@ jobs:
   inputs-outputs:
     runs-on: ubuntu-latest
     steps:
-      - name: Get author name
-        id: author
-        run: echo "::set-output name=author::$(git show -s --format=%an)"
+      - name: Running IAS job
+        run: echo "Running IAS JOB"
