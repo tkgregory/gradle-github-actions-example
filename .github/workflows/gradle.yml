@@ -1,9 +1,11 @@
 name: CI
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["IAS"]
+    branches: [main]
+    types: 
+      - completed
 jobs:
   call-workflow:
     uses: Vishwastp89/gradle-github-actions-example/.github/workflows/IAS.yml@v1.1
