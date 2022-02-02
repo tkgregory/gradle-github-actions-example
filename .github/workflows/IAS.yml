@@ -8,5 +8,5 @@ jobs:
   inputs-outputs:
     runs-on: ubuntu-latest
     steps:
-      - name: Running IAS job
+      - name: Running IAS job 
         run: echo "Running IAS"
