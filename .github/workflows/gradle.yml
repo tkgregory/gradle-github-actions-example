@@ -1,8 +1,11 @@
 name: CI
+
 on:
-  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
 jobs:
-  job1:
+  call-workflow:
     uses: Vishwastp89/gradle-github-actions-example/.github/workflows/IAS.yml@v1.1
     
   build-without-cache:
