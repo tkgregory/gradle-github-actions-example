@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Running IAS job
-        run: echo "Running IAS JOB"
+        run: echo "Running IAS"
