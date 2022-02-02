@@ -1,6 +1,8 @@
 name: IAS
+
 on:
-  workflow_call:
+  push:
+    branches: [ main ]
 jobs:
   inputs-outputs:
     runs-on: ubuntu-latest
