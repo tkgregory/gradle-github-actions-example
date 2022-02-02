@@ -2,7 +2,8 @@ name: CI
 on:
   workflow_dispatch:
   workflow_run:
-    workflows: ["IAS_JOB"]
+    workflows: 
+        - IAS_JOB
     branches: [main]
     types:
       - completed
