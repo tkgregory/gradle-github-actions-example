@@ -1,13 +1,13 @@
 name: CI
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 jobs:
 
   call-workflow:
-    uses: Vishwastp89/gradle-github-actions-example/.github/workflows/IAS.yml@v1
+    uses: Vishwastp89/gradle-github-actions-example/.github/workflows/IAS.yml@v1.1
     
   build-without-cache:
     runs-on: ubuntu-latest
