@@ -7,7 +7,7 @@ on:
 jobs:
 
   call-workflow:
-    uses: Vishwastp89/gradle-github-actions-example/.github/workflows/IAS.yml
+    uses: Vishwastp89/gradle-github-actions-example/.github/workflows/IAS.yml@v1
     
   build-without-cache:
     runs-on: ubuntu-latest
