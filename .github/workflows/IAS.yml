@@ -1,4 +1,4 @@
-name: IAS
+name: IAS_JOB
 
 on:
   push:
