@@ -1,10 +1,9 @@
 name: CI
-
 on:
   workflow_run:
-    workflows: ["IAS"]
+    workflows: ["IAS_JOB"]
     branches: [main]
-    types: 
+    types:
       - completed
 jobs:    
   build-without-cache:
