@@ -1,7 +1,0 @@
-name: IAS
-on:
-  push:
-    branches: [ master ]
-jobs:
-  - name: Run IAS JOB
-    run: echo "IAS JOB"

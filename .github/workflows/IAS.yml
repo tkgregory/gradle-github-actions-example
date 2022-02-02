@@ -1,0 +1,12 @@
+name: IAS
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  inputs-outputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get author name
+        id: author
+        run: echo "::set-output name=author::$(git show -s --format=%an)"
