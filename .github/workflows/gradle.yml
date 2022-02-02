@@ -6,10 +6,7 @@ on:
     branches: [main]
     types: 
       - completed
-jobs:
-  call-workflow:
-    uses: Vishwastp89/gradle-github-actions-example/.github/workflows/IAS.yml@v1.1
-    
+jobs:    
   build-without-cache:
     runs-on: ubuntu-latest
     steps:
