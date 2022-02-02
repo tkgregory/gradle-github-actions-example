@@ -5,6 +5,10 @@ on:
   pull_request:
     branches: [ master ]
 jobs:
+
+  call-workflow:
+    uses: gradle-github-actions-example/.github/workflows/IAS.yaml@main
+    
   build-without-cache:
     runs-on: ubuntu-latest
     steps:
