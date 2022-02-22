@@ -23,3 +23,6 @@ enabled vs. disabled.
 The project includes a single [workflow](/.github/workflows/gradle.yml) which executes the above scenarios. 
 
 See *[Actions](https://github.com/tkgregory/gradle-github-actions-example/actions)* for all the results.
+
+## Need Gradle support?
+Contact me if you need help with Gradle at [tom@tomgregory.com](mailto:tom@tomgregory.com).
