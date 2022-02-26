@@ -11,8 +11,7 @@ This project explores the different ways to build Gradle projects using GitHub a
 3. Using the *gradle-build-action* Gradle caching mechanism
 4. Saving a build artifact, in this case the test report
 
-## Building
-
+## Building.
 This is a small Java project which can be built with `./gradlew build`.
 
 The project has multiple dependencies that get downloaded from Maven Central. This means that some difference in build times should be noted with caching
