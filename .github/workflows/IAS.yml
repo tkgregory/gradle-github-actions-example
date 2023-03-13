@@ -1,0 +1,12 @@
+name: IAS_JOB
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  inputs-outputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running IAS job 
+        run: echo "Running IAS"
