@@ -39,6 +39,11 @@ jobs:
         run: |
            echo  Phoenix@565  | docker login -u  prem19  --password-stdin
            docker push prem19/prem1903:${GITHUB_RUN_NUMBER}
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   # build-with-setup-java-cache:
   #   runs-on: ubuntu-latest
   #   steps:
