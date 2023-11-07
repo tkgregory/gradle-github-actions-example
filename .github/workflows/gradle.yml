@@ -32,13 +32,13 @@ jobs:
      
        
       - name: Tag Docker image
-        run: docker tag mydockerimage prem19/prem1903 :${GITHUB_RUN_NUMBER}
+        run: docker tag mydockerimage prem19/prem1903:${GITHUB_RUN_NUMBER}
            
            
       - name: Push Docker image to Docker Hub
         run: |
            echo  Phoenix@565  | docker login -u  prem19  --password-stdin
-           docker push prem19/prem1903 :${GITHUB_RUN_NUMBER}
+           docker push prem19/prem1903:${GITHUB_RUN_NUMBER}
   # build-with-setup-java-cache:
   #   runs-on: ubuntu-latest
   #   steps:
