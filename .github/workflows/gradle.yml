@@ -14,8 +14,9 @@ jobs:
         with:
           java-version: 17
           distribution: 'adopt'
+          cache: gradle
       - name: Build with Gradle
-        run: ./gradlew build --scan
+        run: ./gradlew build
   # build-with-setup-java-cache:
   #   runs-on: ubuntu-latest
   #   steps:
