@@ -19,7 +19,7 @@ jobs:
         run: |
          ./gradlew build
          ls -la
-         cd /build
+         cd build
          ls -la
   # build-with-setup-java-cache:
   #   runs-on: ubuntu-latest
