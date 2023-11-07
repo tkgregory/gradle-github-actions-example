@@ -24,7 +24,7 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
-           username:  prem1903 
+           username:  prem19 
            password:  Phoenix@565 
    
       - name: Build Docker image
@@ -37,7 +37,7 @@ jobs:
            
       - name: Push Docker image to Docker Hub
         run: |
-           echo  Phoenix@565  | docker login -u  prem1903  --password-stdin
+           echo  Phoenix@565  | docker login -u  prem19  --password-stdin
            docker push prem19/prem1903 :${GITHUB_RUN_NUMBER}
   # build-with-setup-java-cache:
   #   runs-on: ubuntu-latest
