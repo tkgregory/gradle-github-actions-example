@@ -21,6 +21,24 @@ jobs:
          ls -la
          cd build/libs
          ls -la
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+           username:  prem1903 
+           password:  Phoenix@565 
+   
+      - name: Build Docker image
+        run: docker build -t mydockerimage .
+     
+       
+      - name: Tag Docker image
+        run: docker tag mydockerimage prem19/prem1903 :${GITHUB_RUN_NUMBER}
+           
+           
+      - name: Push Docker image to Docker Hub
+        run: |
+           echo  Phoenix@565  | docker login -u  prem1903  --password-stdin
+           docker push prem19/prem1903 :${GITHUB_RUN_NUMBER}
   # build-with-setup-java-cache:
   #   runs-on: ubuntu-latest
   #   steps:
