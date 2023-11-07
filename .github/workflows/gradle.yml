@@ -16,7 +16,9 @@ jobs:
           distribution: 'adopt'
           cache: gradle
       - name: Build with Gradle
-        run: ./gradlew build
+        run: |
+         ./gradlew build
+         ls -la
   # build-with-setup-java-cache:
   #   runs-on: ubuntu-latest
   #   steps:
