@@ -34,17 +34,17 @@ jobs:
           fi
           echo "Current Directory (PWD): $PWD"
           displayName: 'Secret Detection'
-      - name: Add coverage to PR
-        id: jacoco
-        uses: madrapps/jacoco-report@v1.6.1
+      - name: Run Tests
+        run: ./gradlew test
+  
+      - name: Run Test Coverage
+        run: ./gradlew jacocoTestReport
+  
+      - name: Generate JaCoCo Badge
+        uses: cicirello/jacoco-badge-generator@v2
         with:
-              paths: |
-               build/reports/jacoco/prodNormalDebugCoverage/prodNormalDebugCoverage.html
-               ls -la
-               build/reports/jacoco/**/debugCoverage.html
-              token: ${{ secrets.GITHUB_TOKEN }}
-              min-coverage-overall: 40
-              min-coverage-changed-files: 60
+            generate-branches-badge: true
+            jacoco-csv-file: build/reports/jacoco/test/jacocoTestReport.csv
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
