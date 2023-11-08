@@ -21,6 +21,19 @@ jobs:
          ls -la
          cd build/libs
          ls -la
+      - name: detect secrets
+        run: |
+          pip install detect-secrets
+          scan_result=$(detect-secrets scan)
+          if echo "$scan_result" | grep -q '"hashed_secret":'; then
+          echo "Secrets were found during the scan:"
+          echo "$scan_result"
+          #exit 1
+          else
+          echo "No secrets were found."
+          fi
+          echo "Current Directory (PWD): $PWD"
+          displayName: 'Secret Detection'
       - name: Add coverage to PR
         id: jacoco
         uses: madrapps/jacoco-report@v1.6.1
