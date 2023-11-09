@@ -1,5 +1,8 @@
 plugins {
     id 'application'
+    id "org.sonarqube" version "3.1"
+    id 'jacoco'
+
 }
 
 repositories {
@@ -23,6 +26,11 @@ buildScan {
     termsOfServiceAgree = 'yes'
 }
 
+jacocoTestReport {
+    reports {
+        csv.enabled true
+    }
+}
 
 testing {
     suites {
