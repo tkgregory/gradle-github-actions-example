@@ -31,7 +31,5 @@ jobs:
       with:
         name: my-artifact
         path: build/reports/tests/test
-
-    - name: Display structure of downloaded files
-      run: ls -R
-      working-directory: build/reports/tests/test
+        if-no-files-found: ereor
+        retention-days: 90
